@@ -85,7 +85,7 @@ const SITE_KEYWORDS =
     <link rel="manifest" href="/site.webmanifest" />
 
     <!-- Schema.org Structured Data for Rich Snippets -->
-    <script type="application/ld+json">
+    <script is:inline type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "MobileApplication",
@@ -136,7 +136,7 @@ const SITE_KEYWORDS =
     </script>
 
     <!-- Organization Schema -->
-    <script type="application/ld+json">
+    <script is:inline type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Organization",
@@ -145,6 +145,22 @@ const SITE_KEYWORDS =
         "logo": "https://www.lumina.app/logo.png",
         "sameAs": ["https://www.facebook.com/luminaapp", "https://www.instagram.com/luminaapp", "https://twitter.com/luminaapp"]
       }
+    </script>
+
+    <!-- Dark Mode Support -->
+    <script is:inline>
+      const hasMatchMedia = typeof window.matchMedia !== "undefined"
+      if (hasMatchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        document.documentElement.classList.add("dark")
+      }
+
+      window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (event) => {
+        if (event.matches) {
+          document.documentElement.classList.add("dark")
+        } else {
+          document.documentElement.classList.remove("dark")
+        }
+      })
     </script>
   </head>
 
