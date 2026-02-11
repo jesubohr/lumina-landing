@@ -3,16 +3,13 @@ import "@/styles/global.css"
 import Header from "@/components/header.astro"
 import Footer from "@/components/footer.astro"
 
-interface Props {
-  subtitle?: string
-}
-const { subtitle } = Astro.props
-
-const TITLE = "PRODUCT_NAME"
-const SITE_TITLE = `${subtitle} | ${TITLE}`
-const SITE_DESCRIPTION = "<DESCRIPTION>"
-const SITE_URL = "<URL>"
-const SITE_KEYWORDS = "<KEYWORDS>"
+const TITLE = "Lumina"
+const SITE_TITLE = `Self-Knowledge App | ${TITLE}`
+const SITE_DESCRIPTION =
+  "Meet the parts of you that words can't reach. A guided journey into your psyche blending psychology, astrology, and numerology. Start your free 7-day trial today."
+const SITE_URL = "https://www.lumina.app"
+const SITE_KEYWORDS =
+  "self-discovery app, psychology app, astrology app, numerology, personal growth, inner journey, meditation app, spiritual growth, emotional resonance, archetypal psychology, daily ritual, mindfulness"
 ---
 
 <!doctype html>
@@ -61,11 +58,11 @@ const SITE_KEYWORDS = "<KEYWORDS>"
     <meta name="google-play-app" content="app-id=<APP_ID>" />
 
     <!-- Theme Color -->
-    <meta name="theme-color" content="#<COLOR>" />
-    <meta name="msapplication-TileColor" content="#<COLOR>" />
+    <meta name="theme-color" content="#a78bfa" />
+    <meta name="msapplication-TileColor" content="#a78bfa" />
 
     <!-- Additional SEO -->
-    <meta name="author" content="<AUTHOR>" />
+    <meta name="author" content="Lumina Inc." />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <meta name="googlebot" content="index, follow" />
     <meta name="language" content="English" />
@@ -87,15 +84,66 @@ const SITE_KEYWORDS = "<KEYWORDS>"
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
 
+    <!-- Schema.org Structured Data for Rich Snippets -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "MobileApplication",
+        "name": "Lumina",
+        "operatingSystem": "iOS, Android",
+        "applicationCategory": "LifestyleApplication",
+        "description": "A guided journey into your psyche blending psychology, astrology, and numerology. Discover your inner compass through archetypal clarity, emotional resonance, and sacred rhythm.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD",
+          "description": "Free 7-day trial"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5",
+          "ratingCount": "2",
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "review": [
+          {
+            "@type": "Review",
+            "author": {
+              "@type": "Person",
+              "name": "The Introspective"
+            },
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5"
+            },
+            "reviewBody": "This app found the words I couldn't speak. It feels like looking into a mirror for the soul. Finally, technology that feels sacred."
+          },
+          {
+            "@type": "Review",
+            "author": {
+              "@type": "Person",
+              "name": "The Seeker"
+            },
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5"
+            },
+            "reviewBody": "A space that respects the mystery of self-discovery without the fluff. It's become my morning coffee for the spirit."
+          }
+        ]
+      }
+    </script>
+
     <!-- Organization Schema -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Organization",
-        "name": "TITLE",
-        "url": "SITE_URL",
-        "logo": "SITE_URL/logo.png"
-        // "sameAs": ["SOCIAL_MEDIA_URL"]
+        "name": "Lumina Inc.",
+        "url": "https://www.lumina.app",
+        "logo": "https://www.lumina.app/logo.png",
+        "sameAs": ["https://www.facebook.com/luminaapp", "https://www.instagram.com/luminaapp", "https://twitter.com/luminaapp"]
       }
     </script>
   </head>
