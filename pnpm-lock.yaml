@@ -50,6 +50,9 @@ importers:
       react-dom:
         specifier: 19.2.4
         version: 19.2.4(react@19.2.4)
+      shaders:
+        specifier: 2.3.54
+        version: 2.3.54
       tailwind-merge:
         specifier: 3.4.0
         version: 3.4.0
@@ -4685,6 +4688,9 @@ packages:
     resolution: {integrity: sha512-pSad/m1+PGzB0aLsRBV0EkyGg9al1nJqYUuucg6d8v8xZspPZ5/ehGNEp5M4b1KQYqdO5/gGPbkhVbgmXqG9Pw==}
     hasBin: true
 
+  shaders@2.3.54:
+    resolution: {integrity: sha512-o4PBV8C2geda7KDLs9srwjR7N2tH+6Q3VcT5WIrirv3QcjfmWGh1PbmmFXakCd/j2VARTzuj74AZNjd5GjnYow==}
+
   sharp@0.34.5:
     resolution: {integrity: sha512-Ou9I5Ft9WNcCbXrU9cMgPBcCK8LiwLqcbywW3t4oDV37n1pzpuNLsYiAV8eODnjbtQlSDwZ2cUEeQz4E54Hltg==}
     engines: {node: ^18.17.0 || ^20.3.0 || >=21.0.0}
@@ -4871,6 +4877,9 @@ packages:
 
   text-hex@1.0.0:
     resolution: {integrity: sha512-uuVGNWzgJ4yhRaNSiubPY7OjISw4sw4E5Uv0wbjp+OzcbmVU/rsT8ujgcXJhn9ypzsgr5vlzpPqP+MBBKcGvbg==}
+
+  three@0.182.0:
+    resolution: {integrity: sha512-GbHabT+Irv+ihI1/f5kIIsZ+Ef9Sl5A1Y7imvS5RQjWgtTPfPnZ43JmlYI7NtCRDK9zir20lQpfg8/9Yd02OvQ==}
 
   tiny-inflate@1.0.3:
     resolution: {integrity: sha512-pkY1fj1cKHb2seWDy0B16HeWyczlJA9/WW3u3c4z/NiWDsO3DOU5D7nhTLE9CF0yXv/QZFY7sEJmj24dK+Rrqw==}
@@ -10627,6 +10636,10 @@ snapshots:
       - supports-color
       - typescript
 
+  shaders@2.3.54:
+    dependencies:
+      three: 0.182.0
+
   sharp@0.34.5:
     dependencies:
       '@img/colour': 1.0.0
@@ -10860,6 +10873,8 @@ snapshots:
       - react-native-b4a
 
   text-hex@1.0.0: {}
+
+  three@0.182.0: {}
 
   tiny-inflate@1.0.3: {}
 
