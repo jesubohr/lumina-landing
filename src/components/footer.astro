@@ -1,5 +1,16 @@
 ---
-
+import AnimatedHeadings from "./blocks/animated-headings-footer"
+const currentYear = new Date().getFullYear()
 ---
 
-<footer></footer>
+<footer id="download" class="px-6 py-24">
+  <div class="mx-auto max-w-lg text-center">
+    <AnimatedHeadings client:visible />
+    <nav class="mt-12 flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground">
+      <a href="#" class="transition-colors hover:text-foreground">Privacy Policy</a>
+      <a href="#" class="transition-colors hover:text-foreground">Terms of Service</a>
+      <a href="#" class="transition-colors hover:text-foreground">Support</a>
+    </nav>
+    <p class="mt-8 text-xs text-muted-foreground/60">&copy; {currentYear} Lumina Inc. All rights reserved.</p>
+  </div>
+</footer>
