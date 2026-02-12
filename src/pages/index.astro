@@ -1,7 +1,16 @@
 ---
 import Layout from "@/layouts/layout.astro"
+import Hero from "@/components/sections/hero"
+import About from "@/components/sections/about"
+import DailyRitual from "@/components/sections/ritual"
+import Testimonials from "@/components/sections/testimonials"
 ---
 
 <Layout>
-  <h1>Home</h1>
+  <main class="min-h-screen bg-background">
+    <Hero client:only />
+    <About client:visible />
+    <DailyRitual client:visible />
+    <Testimonials client:visible />
+  </main>
 </Layout>
