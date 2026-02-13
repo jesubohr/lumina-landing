@@ -21,7 +21,8 @@ export default function Footer() {
         transition={{ duration: 0.6, delay: 0.1 }}
         className="mt-4 text-lg text-muted-foreground"
       >
-        A private space for your inner evolution. Start your free 7-day trial today.
+        A private space for your inner evolution.
+        <br /> Start your free 7-day trial today.
       </motion.p>
 
       <motion.a

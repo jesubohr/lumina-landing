@@ -122,12 +122,3 @@
     @apply bg-background text-foreground;
   }
 }
-
-/* Declare Fonts */
-@font-face {
-  font-family: "Hypertext";
-  src: url("/fonts/Hypertext.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
