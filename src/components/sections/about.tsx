@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import { Diamond, Flame, Infinity, Moon } from "lucide-react"
+import { Diamond, Flame, Infinity } from "lucide-react"
 
 const features = [
   {
@@ -21,7 +21,7 @@ const features = [
 
 export default function About() {
   return (
-    <section className="px-6 py-24">
+    <section id="about" className="px-6 py-24 scroll-mt-20">
       <div className="mx-auto max-w-2xl text-center">
         {/* Moon icon */}
         <motion.div

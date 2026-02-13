@@ -23,17 +23,17 @@ const steps = [
 
 export default function DailyRitual() {
   return (
-    <section className="px-6 py-24">
+    <section id="rituals" className="px-6 py-24 scroll-mt-20">
       <div className="mx-auto max-w-lg">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center"
+          className="text-center space-y-4"
         >
           <h2 className="text-3xl font-bold text-foreground md:text-4xl">Your Daily Ritual</h2>
-          <p className="mt-2 text-muted-foreground">Three steps to alignment</p>
+          <p className="text-lg text-muted-foreground">Three steps to alignment</p>
         </motion.div>
 
         <div className="relative mt-16">
