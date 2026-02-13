@@ -62,7 +62,7 @@ export default function About() {
       </div>
 
       {/* Feature cards */}
-      <div className="mx-auto mt-20 flex max-w-lg flex-col gap-6">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 mx-auto mt-20 max-w-4xl">
         {features.map((feature, i) => (
           <motion.div
             key={feature.title}
@@ -75,8 +75,8 @@ export default function About() {
             <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-secondary">
               <feature.icon className="h-5 w-5 text-primary" />
             </div>
-            <h3 className="text-lg font-bold text-foreground">{feature.title}</h3>
-            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{feature.description}</p>
+            <h3 className="text-xl font-bold text-foreground">{feature.title}</h3>
+            <p className="mt-2 leading-relaxed text-muted-foreground">{feature.description}</p>
           </motion.div>
         ))}
       </div>
